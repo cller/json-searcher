@@ -1,0 +1,25 @@
+{
+    "lang": {
+        "zh": {
+            "great": "你好，世界 !"
+        },
+        "en": {
+            "great": "Hello world !"
+        }
+    },
+    "number": {
+        "n1": 100
+    },
+    "sex": [
+        "man",
+        "women",
+        {
+            "name": "mw"
+        },
+        {
+            "name": "wm"
+        },
+        1
+    ],
+    "null": null
+}

@@ -1,0 +1,86 @@
+{
+  "name": "json-searcher",
+  "version": "1.0.0",
+  "description": "json search javascript typescript json comment",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:extension.jsonSearcher",
+    "onCommand:extension.jsonPicker"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.jsonSearcher",
+        "title": "Search JSON Expression"
+      },
+      {
+        "command": "extension.jsonPicker",
+        "title": "Pick JSON Expression"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "jsonSearchResults",
+          "name": "JSON Search Results"
+        }
+      ]
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.jsonSearcher",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.jsonPicker",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -w -p ./"
+  },
+  "publisher": "cller",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cller/json-searcher.git"
+  },
+  "keywords": [
+    "json",
+    "search",
+    "javascript",
+    "typescript",
+    "json",
+    "comment"
+  ],
+  "author": "cller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cller/json-searcher/issues"
+  },
+  "homepage": "https://github.com/cller/json-searcher#readme",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "devDependencies": {
+    "@types/json-to-ast": "^2.1.2",
+    "@types/node": "^17.0.23",
+    "@types/vscode": "^1.65.0",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "json-to-ast": "^2.1.0"
+  }
+}
